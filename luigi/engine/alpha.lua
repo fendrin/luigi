@@ -118,7 +118,6 @@ return function (config)
             flow = 'x',
             height = getControlHeight,
             width = getControlWidth,
-            color = textColor,
             align = 'center middle',
             margin = 2,
             color = textColor,
