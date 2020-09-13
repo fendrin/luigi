@@ -90,11 +90,11 @@ function Input:handleMove (layout, x, y)
             oldTarget = previousWidget,
             x = x, y = y
         })
-        if widget.cursor then
-            Backend.setCursor(Backend.getSystemCursor(widget.cursor))
-        else
-            Backend.setCursor()
-        end
+        -- if widget.cursor then
+        --     Backend.setCursor(Backend.getSystemCursor(widget.cursor))
+        -- else
+        --     Backend.setCursor()
+        -- end
         self.previousMoveWidget = widget
     end
     return hit
