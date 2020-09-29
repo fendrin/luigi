@@ -50,7 +50,7 @@ function Painter:paintOutline ()
 
     Backend.push()
     Backend.setColor(widget.outline)
-    Backend.drawRectangle('line', x + 0.5, y + 0.5, w, h)
+    Backend.drawRectangle('line', x + 0.5, y + 0.5, w - 1.5, h - 1.5, 3)
     Backend.pop()
 end
 
