@@ -398,7 +398,11 @@ function Layout:addDefaultHandlers ()
             or event.key == 'return' then
                 self.input:handlePressStart(self, 'left', event.x, event.y,
                     widget, event.key)
-                return false
+                -- returning nil instead of false results in 'return'
+                -- being also propagated to the handler luigi hooked in
+                -- todo learn more about the return code and handle this better
+                -- return false
+                return
             end
         end),
 
