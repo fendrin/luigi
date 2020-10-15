@@ -406,7 +406,7 @@ This color is used to indicate the selected range of text.
         local x, y, w, h = self:getRectangle(true, true)
         local width, height = endX - startX, h
         local font = self:getFont()
-        local color = self.color or { 0, 0, 0, 255 }
+        local color = self.color or { 0, 0, 0, 1 }
         local textTop = math.floor(y + (h - font:getLineHeight()) / 2)
 
         Backend.push()

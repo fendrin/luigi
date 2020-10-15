@@ -67,19 +67,7 @@ Backend.quit = function ()
      love.event.quit()
 end
 
-if _G.love._version_major >= 11 then
-    Backend.setColor = function(r, g, b, a)
-        if type(r) == "table" then
-            r, g, b, a = r[1], r[2], r[3], r[4]
-        end
-        if a == nil then
-            a = 255
-        end
-        love.graphics.setColor(r / 255, g / 255, b / 255, a / 255)
-    end
-else
-    Backend.setColor = love.graphics.setColor
-end
+Backend.setColor = love.graphics.setColor
 
 Backend.setCursor = love.mouse.setCursor
 
